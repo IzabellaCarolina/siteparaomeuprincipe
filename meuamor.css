@@ -1,0 +1,45 @@
+   body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 4, 88);
+    font-family: Arial, sans-serif;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do botão */
+.gift-button {
+    background-color: #aa97a1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gift-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsividade para celular */
+@media (max-width: 480px) {
+    .gift-button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}

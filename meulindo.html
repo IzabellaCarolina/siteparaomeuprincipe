@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo</title>
+    <link rel="stylesheet" href="meulindo.css">
+</head>
+
+<body>
+    <div class="player">
+        <img src="bebel.jpg" class="cover" alt="Capa da Música">
+        <div class="info">
+            <div class="title">Congratulations (feat. Bilal)</div>
+            <div class="artist">Mac Miller</div>
+            <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        </div>
+        <button class="controls" id="playBtn">▶</button>
+    </div>
+
+    <audio id="music" src="mac-miller-congratulations-feat-bilal.mp3"></audio>
+
+    <script>
+        const playBtn = document.getElementById("playBtn");
+        const music = document.getElementById("music");
+        const progressBar = document.getElementById("progressBar");
+        let isPlaying = false;
+
+        playBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                music.pause();
+                playBtn.textContent = "▶";
+            } else {
+                music.play();
+                playBtn.textContent = "⏸";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Atualiza barra de progresso
+        music.addEventListener('timeupdate', () => {
+            const progress = (music.currentTime / music.duration) * 100;
+            progressBar.style.width = progress + '%';
+        });
+    </script>
+
+    <img src="meu.jpg" alt="Imagem 1" class="message-img">
+
+    <p class="message">
+        A cada dia que passa eu percebo o quão sortuda eu sou por ter encontrado alguém como você.<br>
+        Você é incrível, uma pessoa gentil, carinhosa, MUITO engraçado, carinhoso, além de ser o homem mais lindo que eu já vi.<br>
+        No final do dia eu percebo que sempre foi você, meu coração sempre te escolheu.<br>
+        Eu te amo infinitamente!!!!💖
+    </p>
+
+</body>
+
+</html>
