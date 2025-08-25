@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para meu amor: Gabriel</title>
+    <link rel="stylesheet" href="meuamor.css">
+</head>
+
+<body>
+    <div class="center-container">
+        <button class="gift-button" onclick="playMusicAndRedirect()">Me Clique 💖</button>
+    </div>
+
+    <script>
+        function playMusicAndRedirect() {
+            const audio = new Audio('musica.mp3'); // Coloque seu arquivo de música na mesma pasta
+            audio.play();
+
+            setTimeout(() => {
+                window.location.href = "meulindo.html"; // caminho relativo
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
